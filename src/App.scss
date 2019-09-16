@@ -1,39 +1,37 @@
+@import "./assets/scss/variables";
+@import "./assets/scss/colors";
+
 .App {
-  font-family: Merriweather Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-family: $Merriweather-font;
   h2 {
     margin: 0 0 5px 0;
     font-size: 16px;
     font-weight: 600;
-    color: #656e79;
+    color: $text-medium;
   }
   .App-header {
     height: 65px;
-    box-shadow: 0 0 5px 2px #c9c9c9;
-
+    box-shadow: 0 0 5px 2px $shadow-gray;
     .logo-container {
-      width: 1200px;
       margin: auto;
     }
   }
 
   .container {
     display: flex;
-    width: 1200px;
     margin: 30px auto;
-    justify-content: space-between;
-    box-shadow: 0 3px 10px 6px #f9f9f9;
+    flex-direction: column;
+    box-shadow: 0 3px 10px 6px $shadow-gray-secondary;
     padding: 15px;
 
     .col {
       flex: 1;
-      &.map {
-        min-height: 450px;
-      }
     }
     .map {
       iframe {
         width: 100%;
-        height: 100%;
+        height: 400px;
+        margin-bottom: 15px;
       }
     }
     .marker-controls {
@@ -50,8 +48,8 @@
 
         &.btn-primary {
           color: #fff;
-          background-color: #007bff;
-          border-color: #007bff;
+          background-color: $primary-blue;
+          border-color: $primary-blue;
         }
 
       }
@@ -82,6 +80,29 @@
         }
         .marker-actions {
           margin-top: auto;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .App {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .logo-container, .container {
+      max-width: 1200px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .App {
+    .container {
+      .marker-list {
+        .marker-item {
+          flex: 1 0 45%;
         }
       }
     }

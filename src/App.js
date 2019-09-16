@@ -12,7 +12,7 @@ function App() {
       </header>
       <div className="container">
         <div className="col map">
-          <iframe  id="map-embed" src="https://maps.google.com/maps?q=leipzig&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          <iframe  id="map-embed" src="https://maps.google.com/maps?q=leipzig&t=&z=11&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
         </div>
         <div className="col marker-controls">
           <div className="add-marker">
